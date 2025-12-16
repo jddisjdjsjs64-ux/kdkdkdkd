@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const revalidate = 10;
 
-const TOKEN_ADDRESS = "8hmFgiKHjgPaFvntHqj2bLm1JAP11V6Fxkm6Tekepump";
+const TOKEN_ADDRESS = "KX2qhwFo2Lc6X6xqsE4VpkmZqZr22DKuFHCK8t7pump";
 
 export async function GET() {
   const url = `https://api.dexscreener.com/tokens/v1/solana/${TOKEN_ADDRESS}`;

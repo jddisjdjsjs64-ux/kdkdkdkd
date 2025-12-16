@@ -1,12 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { LineChart, ScanSearch, Zap } from "lucide-react";
+import { LineChart, ScanSearch, Zap, Twitter } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const TOKEN_MINT = "8hmFgiKHjgPaFvntHqj2bLm1JAP11V6Fxkm6Tekepump";
-const DEX_URL =
-  "https://dexscreener.com/solana/euabmnyqkcomqdcknkyfpfpdkgffyge361b9w2nz5wcv";
+const TOKEN_MINT = "KX2qhwFo2Lc6X6xqsE4VpkmZqZr22DKuFHCK8t7pump";
+const DEX_URL = `https://dexscreener.com/solana/${TOKEN_MINT}`;
 const SOLSCAN_URL = `https://solscan.io/token/${TOKEN_MINT}`;
 const PUMP_FUN_URL = `https://pump.fun/${TOKEN_MINT}`;
 
@@ -117,7 +116,7 @@ export function TokenHeader({ className }: { className?: string }) {
         )}
 
         <div className="text-sm font-semibold tracking-[0.25em]">
-          {pair?.baseToken?.symbol ?? "HERO"}
+          {pair?.baseToken?.symbol ?? "AIVERSE"}
         </div>
       </button>
 
@@ -133,6 +132,11 @@ export function TokenHeader({ className }: { className?: string }) {
           icon={<ScanSearch size={16} />}
         />
         <NavLink href={PUMP_FUN_URL} label="pump.fun" icon={<Zap size={16} />} />
+        <NavLink
+          href="https://x.com/AIVERSE3D"
+          label="X"
+          icon={<Twitter size={16} />}
+        />
       </nav>
     </div>
     </div>

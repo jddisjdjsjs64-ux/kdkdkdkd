@@ -190,6 +190,8 @@ function PriceCard({
 
 
 export function TokenDashboard3D({ className }: { className?: string }) {
+  const TOKEN_ADDRESS = "KX2qhwFo2Lc6X6xqsE4VpkmZqZr22DKuFHCK8t7pump";
+  const DEFAULT_DEX_URL = `https://dexscreener.com/solana/${TOKEN_ADDRESS}`;
   const [pair, setPair] = React.useState<DexscreenerPair | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [priceHistory, setPriceHistory] = React.useState<PricePoint[]>([]);
@@ -377,7 +379,7 @@ export function TokenDashboard3D({ className }: { className?: string }) {
                 "backdrop-blur-md text-white hover:bg-black/45",
                 "transition-colors",
               )}
-              href={pair?.url ?? "https://dexscreener.com"}
+              href={pair?.url ?? DEFAULT_DEX_URL}
               target="_blank"
               rel="noreferrer"
             >

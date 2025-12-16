@@ -9,6 +9,8 @@ import { ParticleTextEffect } from "@/components/ui/particle-text-effect";
 
 const FAKE_LOADING_MS = 6500;
 const FADE_MS = 900;
+const TOKEN_MINT = "KX2qhwFo2Lc6X6xqsE4VpkmZqZr22DKuFHCK8t7pump";
+const DEX_URL = `https://dexscreener.com/solana/${TOKEN_MINT}`;
 
 export default function Home() {
   const [showLoading, setShowLoading] = React.useState(true);
@@ -44,22 +46,22 @@ export default function Home() {
         <section className="relative flex min-h-screen items-center justify-center px-6">
           <div className="w-full max-w-4xl text-center">
             <div className="text-6xl font-semibold tracking-tight text-white md:text-7xl">
-              Анна Хуйцова.
+              AIVERSE.
             </div>
             <div className="mt-4 text-lg font-medium tracking-[0.25em] text-white/80 md:text-xl">
-              Эскортинца.
+              🌌 3D avatars, AI, and memes in one universe.
             </div>
             <div className="mt-2 text-lg font-medium tracking-[0.25em] text-white/80 md:text-xl">
-              Высшего качества.
+              🚀 Join $AIV now!
             </div>
 
             <a
-              href="https://dexscreener.com/solana/euabmnyqkcomqdcknkyfpfpdkgffyge361b9w2nz5wcv"
+              href={DEX_URL}
               target="_blank"
               rel="noreferrer"
               className="group mt-10 inline-flex items-center justify-center rounded-full border border-white/15 bg-black/35 px-7 py-3 text-sm font-semibold tracking-[0.25em] text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-black/45 hover:shadow-[0_0_80px_rgba(169,0,255,0.22)]"
             >
-              ЗАКАЗ
+              Buy $AIV on Dexscreener
               <span className="ml-2 opacity-70 transition-transform duration-300 group-hover:translate-x-0.5">
                 →
               </span>
